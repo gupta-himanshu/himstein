@@ -1,0 +1,16 @@
+@(mailForm: Form[controllers.Application.MailData])
+
+@import helper._
+
+@main("Email Sending App") {
+
+@helper.form(action = routes.Application.sendMail, 'id -> "MailForm") {
+			        	
+			            @inputText(mailForm("email"), '_label -> "Email")
+
+			        <div class="form-actions">
+			            <input type="submit" class="btn btn-primary" value="Send Mail">
+			        </div>
+			        
+}
+}
